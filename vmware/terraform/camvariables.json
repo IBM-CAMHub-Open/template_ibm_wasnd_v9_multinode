@@ -119,6 +119,17 @@
       "group_name": "virtualmachine"
     },
     {
+      "name": "IHSNode01_domain",
+      "type": "string",
+      "description": "Domain Name of virtual machine",
+      "hidden": false,
+      "label": "Domain Name - IHSNode01",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
       "name": "IHSNode01_ihs_java_version",
       "type": "string",
       "description": "The Java version to be used with IBM HTTP Server",
@@ -422,7 +433,8 @@
       "options": [
         {
           "value": "eager_zeroed",
-          "label": "Thick Provision Eager Zeroed"
+          "label": "Thick Provision Eager Zeroed",
+          "default": "true"
         },
         {
           "value": "lazy",
@@ -431,7 +443,6 @@
         {
           "value": "thin",
           "label": "Thin Provision",
-          "default": true,
           "group_name": "virtualmachine"
         }
       ],
@@ -465,7 +476,7 @@
       "name": "IHSNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 4096,
+      "default": 2048,
       "hidden": false,
       "label": "Virtual Machine Memory - IHSNode01",
       "secured": false,
@@ -592,6 +603,17 @@
           "label": "True"
         }
       ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "WASDMGRNode01_domain",
+      "type": "string",
+      "description": "Domain Name of virtual machine",
+      "hidden": false,
+      "label": "Domain Name - WASDMGRNode01",
+      "secured": false,
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
@@ -746,7 +768,8 @@
       "options": [
         {
           "value": "eager_zeroed",
-          "label": "Thick Provision Eager Zeroed"
+          "label": "Thick Provision Eager Zeroed",
+          "default": "true"
         },
         {
           "value": "lazy",
@@ -755,7 +778,6 @@
         {
           "value": "thin",
           "label": "Thin Provision",
-          "default": true,
           "group_name": "virtualmachine"
         }
       ],
@@ -789,7 +811,7 @@
       "name": "WASDMGRNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 4096,
+      "default": 2048,
       "hidden": false,
       "label": "Virtual Machine Memory - WASDMGRNode01",
       "secured": false,
@@ -1109,6 +1131,17 @@
       "group_name": "virtualmachine"
     },
     {
+      "name": "WASNode01_domain",
+      "type": "string",
+      "description": "Domain Name of virtual machine",
+      "hidden": false,
+      "label": "Domain Name - WASNode01",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
       "name": "WASNode01-image",
       "type": "string",
       "description": "Operating system image id / template that should be used when creating the virtual image",
@@ -1211,7 +1244,8 @@
       "options": [
         {
           "value": "eager_zeroed",
-          "label": "Thick Provision Eager Zeroed"
+          "label": "Thick Provision Eager Zeroed",
+          "default": "true"
         },
         {
           "value": "lazy",
@@ -1220,7 +1254,6 @@
         {
           "value": "thin",
           "label": "Thin Provision",
-          "default": true,
           "group_name": "virtualmachine"
         }
       ],
@@ -1254,7 +1287,7 @@
       "name": "WASNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 4096,
+      "default": 2048,
       "hidden": false,
       "label": "Virtual Machine Memory - WASNode01",
       "secured": false,
@@ -1574,6 +1607,17 @@
       "group_name": "virtualmachine"
     },
     {
+      "name": "WASNode02_domain",
+      "type": "string",
+      "description": "Domain Name of virtual machine",
+      "hidden": false,
+      "label": "Domain Name - WASNode02",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
       "name": "ibm_pm_access_token",
       "type": "string",
       "description": "IBM Pattern Manager Access Token",
@@ -1796,7 +1840,8 @@
       "options": [
         {
           "value": "eager_zeroed",
-          "label": "Thick Provision Eager Zeroed"
+          "label": "Thick Provision Eager Zeroed",
+          "default": "true"
         },
         {
           "value": "lazy",
@@ -1805,7 +1850,6 @@
         {
           "value": "thin",
           "label": "Thin Provision",
-          "default": true,
           "group_name": "virtualmachine"
         }
       ],
@@ -1839,7 +1883,7 @@
       "name": "WASNode02_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 4096,
+      "default": 2048,
       "hidden": false,
       "label": "Virtual Machine Memory - WASNode02",
       "secured": false,

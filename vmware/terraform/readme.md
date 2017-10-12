@@ -1,9 +1,9 @@
-# Template - IBM WebSphere Network Deployment 9 cell with IBM HTTP Server
+# Template - IBM WebSphere Network Deployment V9 cell with IBM HTTP Server
 Template Version - 1.0
 
 ## Description
 
-This template deploys a WebSphere Application Server Network Deployment 9 cell with an integrated IBM HTTP Server.<br>
+This template deploys a WebSphere Application Server Network Deployment V9 cell with an integrated IBM HTTP Server.<br>
 
 ## Features
 
@@ -31,9 +31,9 @@ Virtual Machine 4: IBM HTTP Server and web server plug-in for WAS configured<br>
 <br>
 ### Software Deployed
 
-IBM WebSphere Application Server Network Deployment 9<br>
-IBM HTTP Server for WebSphere Application Server 9<br>
-Web Server Plug-ins for IBM WebSphere Application Server 9<br>
+IBM WebSphere Application Server Network Deployment V9<br>
+IBM HTTP Server for WebSphere Application Server V9<br>
+Web Server Plug-ins for IBM WebSphere Application Server V9<br>
 IBM SDK, Java Technology Edition 8<br>
 <br>
 ### Default Virtual Machine Settings
@@ -62,22 +62,22 @@ VMware vSphere
 ### Software Deployed
 
 - IBM WebSphere 
-- IBM HTTPd Server 
+- IBM HTTP Server 
 
 ### Major Versions
 
 - IBM WebSphere  8.5.5
 - IBM WebSphere  9.0.0
-- IBM HTTPd Server  8.5.5
-- IBM HTTPd Server  9.0.0
+- IBM HTTP Server  8.5.5
+- IBM HTTP Server  9.0.0
 
 
 ### Minor Versions
 
 - IBM WebSphere  8.5.5.12
 - IBM WebSphere  9.0.0.4
-- IBM HTTPd Server  8.5.5.12
-- IBM HTTPd Server  9.0.0.4
+- IBM HTTP Server  8.5.5.12
+- IBM HTTP Server  9.0.0.4
 
 
 *Note, these represent base versions only, explicit fixpacks may also be added.*
@@ -191,7 +191,7 @@ The following is a summary of the minimal requirements available to the base ope
   </tr>
 </table>
 
-### IBM HTTPd Server 
+### IBM HTTP Server 
 <table>
   <tr>
     <td>Internal Firewall</td>
@@ -241,7 +241,7 @@ The following lists on a per-product basis the minimal reccomended disk required
   </tr>
 </table>
 
-### IBM HTTPd Server 
+### IBM HTTP Server 
 <table>
   <tr>
     <td>/var</td>
@@ -281,7 +281,7 @@ The following standard operating system libraries are required in the relevant O
   </tr>
 </table>
 
-### IBM HTTPd Server 
+### IBM HTTP Server 
 <table>
   <tr>
     <td>debian</td>
@@ -373,7 +373,7 @@ Network connectivity is required from the deployed nodes to standard infrastruct
   </tr>
 </table>
 
-### IBM HTTPd Server 
+### IBM HTTP Server 
 <table>
   <tr>
     <td>Admin Port</td>
@@ -424,7 +424,7 @@ The following files are neccessary on the Software Repository to successfully in
   </tr>
 </table>
 
-## IBM HTTPd Server 
+## IBM HTTP Server 
 
 ### Installation
 <table>
@@ -438,7 +438,7 @@ The following files are neccessary on the Software Repository to successfully in
     <td>8.5.5</td>
     <td>X86_64</td>
     <td>IM Repository File</td>
-    <td><br>com.ibm.websphere.IHS.v85_8.5.5011.20161206_1434</br><br>com.ibm.websphere.PLG.v85_8.5.5011.20161206_1434</br></td>
+    <td><br>com.ibm.websphere.IHS.v85_8.5.5012.20170627_1018</br><br>com.ibm.websphere.PLG.v85_8.5.5012.20170627_1018</br></td>
   </tr>
   <tr>
     <td>9.0.0</td>
