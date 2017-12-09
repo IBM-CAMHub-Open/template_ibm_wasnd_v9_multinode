@@ -12,10 +12,6 @@
       "label": "Cloud Input Variables"
     },
     {
-      "name": "virtualmachine",
-      "label": "Virtual Machine Input Variables"
-    },
-    {
       "name": "ssh_keys",
       "label": "SSH Keys"
     },
@@ -30,6 +26,10 @@
     {
       "name": "image_parameters",
       "label": "Image Parameters"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
     },
     {
       "name": "wasdmgrnode01",
@@ -63,12 +63,95 @@
       "group_name": "environment"
     },
     {
-      "name": "IHSNode01_root_block_device_delete_on_termination",
+      "name": "aws_ami_owner_id",
+      "type": "string",
+      "description": "AWS AMI Owner ID",
+      "default": "309956199498",
+      "hidden": false,
+      "label": "AWS AMI Owner ID",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "aws_region",
+      "type": "string",
+      "description": "AWS Region Name",
+      "default": "us-east-1",
+      "hidden": false,
+      "label": "AWS Region Name",
+      "secured": false,
+      "options": [
+        {
+          "value": "us-east-1",
+          "label": "US East (N. Virginia)",
+          "default": true
+        },
+        {
+          "value": "us-east-2",
+          "label": "US East (Ohio)"
+        },
+        {
+          "value": "us-west-1",
+          "label": "US West (N. California)"
+        },
+        {
+          "value": "us-west-2",
+          "label": "US West (Oregon)"
+        },
+        {
+          "value": "ca-central-1",
+          "label": "Canada (Central)"
+        },
+        {
+          "value": "eu-west-1",
+          "label": "EU (Ireland)"
+        },
+        {
+          "value": "eu-central-1",
+          "label": "EU (Frankfurt)"
+        },
+        {
+          "value": "eu-west-2",
+          "label": "EU (London)"
+        },
+        {
+          "value": "ap-northeast-1",
+          "label": "Asia Pacific (Tokyo)"
+        },
+        {
+          "value": "ap-northeast-2",
+          "label": "Asia Pacific (Seoul)"
+        },
+        {
+          "value": "ap-southeast-1",
+          "label": "Asia Pacific (Singapore)"
+        },
+        {
+          "value": "ap-southeast-2",
+          "label": "Asia Pacific (Sydney)"
+        },
+        {
+          "value": "ap-south-1",
+          "label": "Asia Pacific (Mumbai)"
+        },
+        {
+          "value": "sa-east-1",
+          "label": "South America (São Paulo)"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode02_root_block_device_delete_on_termination",
       "type": "string",
       "description": "AWS Root Block Device Delete on Termination",
       "default": "true",
       "hidden": false,
-      "label": "AWS Root Block Device Delete on Termination - IHSNode01",
+      "label": "AWS Root Block Device Delete on Termination",
       "secured": false,
       "options": [
         {
@@ -83,29 +166,132 @@
       ],
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode01_root_block_device_delete_on_termination",
+      "type": "string",
+      "description": "AWS Root Block Device Delete on Termination",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS Root Block Device Delete on Termination",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASDMGRNode01_root_block_device_delete_on_termination",
+      "type": "string",
+      "description": "AWS Root Block Device Delete on Termination",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS Root Block Device Delete on Termination",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "IHSNode01_root_block_device_delete_on_termination",
+      "type": "string",
+      "description": "AWS Root Block Device Delete on Termination",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS Root Block Device Delete on Termination",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode01_root_block_device_volume_size",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Size",
+      "default": 100,
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Size",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASDMGRNode01_root_block_device_volume_size",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Size",
+      "default": 100,
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Size",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
     },
     {
       "name": "IHSNode01_root_block_device_volume_size",
       "type": "string",
       "description": "AWS Root Block Device Volume Size",
-      "default": 25,
+      "default": 100,
       "hidden": false,
-      "label": "AWS Root Block Device Volume Size - IHSNode01",
+      "label": "AWS Root Block Device Volume Size",
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "cloud"
     },
     {
-      "name": "IHSNode01_root_block_device_volume_type",
+      "name": "WASNode02_root_block_device_volume_size",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Size",
+      "default": 100,
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Size",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode01_root_block_device_volume_type",
       "type": "string",
       "description": "AWS Root Block Device Volume Type",
       "default": "gp2",
       "hidden": false,
-      "label": "AWS Root Block Device Volume Type - IHSNode01",
+      "label": "AWS Root Block Device Volume Type",
       "secured": false,
       "options": [
         {
@@ -128,28 +314,174 @@
       ],
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "cloud"
+    },
+    {
+      "name": "IHSNode01_root_block_device_volume_type",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Type",
+      "default": "gp2",
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Type",
+      "secured": false,
+      "options": [
+        {
+          "value": "gp2",
+          "label": "General Purpose SSD",
+          "default": "true"
+        },
+        {
+          "value": "io1",
+          "label": "Provisioned IOPS SSD"
+        },
+        {
+          "value": "st1",
+          "label": "Throughput Optimized HDD"
+        },
+        {
+          "value": "sc1",
+          "label": "Cold HDD"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode02_root_block_device_volume_type",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Type",
+      "default": "gp2",
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Type",
+      "secured": false,
+      "options": [
+        {
+          "value": "gp2",
+          "label": "General Purpose SSD",
+          "default": "true"
+        },
+        {
+          "value": "io1",
+          "label": "Provisioned IOPS SSD"
+        },
+        {
+          "value": "st1",
+          "label": "Throughput Optimized HDD"
+        },
+        {
+          "value": "sc1",
+          "label": "Cold HDD"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASDMGRNode01_root_block_device_volume_type",
+      "type": "string",
+      "description": "AWS Root Block Device Volume Type",
+      "default": "gp2",
+      "hidden": false,
+      "label": "AWS Root Block Device Volume Type",
+      "secured": false,
+      "options": [
+        {
+          "value": "gp2",
+          "label": "General Purpose SSD",
+          "default": "true"
+        },
+        {
+          "value": "io1",
+          "label": "Provisioned IOPS SSD"
+        },
+        {
+          "value": "st1",
+          "label": "Throughput Optimized HDD"
+        },
+        {
+          "value": "sc1",
+          "label": "Cold HDD"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "aws_sg_camc_name",
+      "type": "string",
+      "description": "AWS Security Group Name",
+      "hidden": false,
+      "label": "AWS Security Group Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASDMGRNode01_subnet_name",
+      "type": "string",
+      "description": "AWS Subnet Name",
+      "hidden": false,
+      "label": "AWS Subnet Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode01_subnet_name",
+      "type": "string",
+      "description": "AWS Subnet Name",
+      "hidden": false,
+      "label": "AWS Subnet Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
     },
     {
       "name": "IHSNode01_subnet_name",
       "type": "string",
       "description": "AWS Subnet Name",
       "hidden": false,
-      "label": "AWS Subnet Name - IHSNode01",
+      "label": "AWS Subnet Name",
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "cloud"
     },
     {
-      "name": "IHSNode01_associate_public_ip_address",
+      "name": "WASNode02_subnet_name",
       "type": "string",
-      "description": "Assign a public IP",
+      "description": "AWS Subnet Name",
+      "hidden": false,
+      "label": "AWS Subnet Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "aws_vpc_name",
+      "type": "string",
+      "description": "AWS VPC Name",
+      "hidden": false,
+      "label": "AWS VPC Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode02_associate_public_ip_address",
+      "type": "string",
+      "description": "AWS assign a public IP to instance",
       "default": "true",
       "hidden": false,
-      "label": "Assign a public IP - IHSNode01",
+      "label": "AWS assign a public IP to instance",
       "secured": false,
       "options": [
         {
@@ -164,8 +496,76 @@
       ],
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASNode01_associate_public_ip_address",
+      "type": "string",
+      "description": "AWS assign a public IP to instance",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS assign a public IP to instance",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "WASDMGRNode01_associate_public_ip_address",
+      "type": "string",
+      "description": "AWS assign a public IP to instance",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS assign a public IP to instance",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "IHSNode01_associate_public_ip_address",
+      "type": "string",
+      "description": "AWS assign a public IP to instance",
+      "default": "true",
+      "hidden": false,
+      "label": "AWS assign a public IP to instance",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        },
+        {
+          "value": "false",
+          "label": "False"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
     },
     {
       "name": "IHSNode01_ihs_java_version",
@@ -485,14 +885,13 @@
       "name": "IHSNode01-flavor",
       "type": "string",
       "description": "IHSNode01 Flavor",
-      "default": "t2.small",
+      "default": "t2.medium",
       "hidden": false,
       "label": "IHSNode01 Flavor",
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
+      "group_name": "virtualmachine"
     },
     {
       "name": "IHSNode01-image",
@@ -529,29 +928,6 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "IHSNode01-mgmt-network-public",
-      "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
-      "hidden": false,
-      "label": "Use Public Management Network - IHSNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": false,
-          "label": false
-        },
-        {
-          "value": true,
-          "label": true
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "ihsnode01"
-    },
-    {
       "name": "ibm_pm_private_ssh_key",
       "type": "string",
       "description": "Private CAMC SSH key (base64 encoded) used to connect to the virtual guest.",
@@ -585,112 +961,8 @@
       "secured": false,
       "required": true,
       "immutable": false,
+      "immutable_after_create": true,
       "group_name": "ssh_keys"
-    },
-    {
-      "name": "WASDMGRNode01_root_block_device_delete_on_termination",
-      "type": "string",
-      "description": "AWS Root Block Device Delete on Termination",
-      "default": "true",
-      "hidden": false,
-      "label": "AWS Root Block Device Delete on Termination - WASDMGRNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
-    },
-    {
-      "name": "WASDMGRNode01_root_block_device_volume_size",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Size",
-      "default": 25,
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Size - WASDMGRNode01",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
-    },
-    {
-      "name": "WASDMGRNode01_root_block_device_volume_type",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Type",
-      "default": "gp2",
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Type - WASDMGRNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "gp2",
-          "label": "General Purpose SSD",
-          "default": "true"
-        },
-        {
-          "value": "io1",
-          "label": "Provisioned IOPS SSD"
-        },
-        {
-          "value": "st1",
-          "label": "Throughput Optimized HDD"
-        },
-        {
-          "value": "sc1",
-          "label": "Cold HDD"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
-    },
-    {
-      "name": "WASDMGRNode01_subnet_name",
-      "type": "string",
-      "description": "AWS Subnet Name",
-      "hidden": false,
-      "label": "AWS Subnet Name - WASDMGRNode01",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
-    },
-    {
-      "name": "WASDMGRNode01_associate_public_ip_address",
-      "type": "string",
-      "description": "Assign a public IP",
-      "default": "true",
-      "hidden": false,
-      "label": "Assign a public IP - WASDMGRNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
     },
     {
       "name": "WASDMGRNode01_was_webserver_ihs_server_admin_port",
@@ -735,6 +1007,7 @@
       "name": "WASDMGRNode01_was_webserver_ihs_server_ihs_admin_user",
       "type": "string",
       "description": "IBM HTTP administrative username. Used for creating the web server definition",
+      "default": "ihsadmin",
       "hidden": false,
       "label": "IBM HTTP administrative username - WASDMGRNode01",
       "secured": false,
@@ -778,117 +1051,12 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "aws_ami_owner_id",
-      "type": "string",
-      "description": "The AMI Owner ID",
-      "default": "309956199498",
-      "hidden": false,
-      "label": "The AMI Owner ID",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "aws_region",
-      "type": "string",
-      "description": "The aws region",
-      "default": "us-east-1",
-      "hidden": false,
-      "label": "The aws region",
-      "secured": false,
-      "options": [
-        {
-          "value": "us-east-1",
-          "label": "US East (N. Virginia)",
-          "default": true
-        },
-        {
-          "value": "us-east-2",
-          "label": "US East (Ohio)"
-        },
-        {
-          "value": "us-west-1",
-          "label": "US West (N. California)"
-        },
-        {
-          "value": "us-west-2",
-          "label": "US West (Oregon)"
-        },
-        {
-          "value": "ca-central-1",
-          "label": "Canada (Central)"
-        },
-        {
-          "value": "eu-west-1",
-          "label": "EU (Ireland)"
-        },
-        {
-          "value": "eu-central-1",
-          "label": "EU (Frankfurt)"
-        },
-        {
-          "value": "eu-west-2",
-          "label": "EU (London)"
-        },
-        {
-          "value": "ap-northeast-1",
-          "label": "Asia Pacific (Tokyo)"
-        },
-        {
-          "value": "ap-northeast-2",
-          "label": "Asia Pacific (Seoul)"
-        },
-        {
-          "value": "ap-southeast-1",
-          "label": "Asia Pacific (Singapore)"
-        },
-        {
-          "value": "ap-southeast-2",
-          "label": "Asia Pacific (Sydney)"
-        },
-        {
-          "value": "ap-south-1",
-          "label": "Asia Pacific (Mumbai)"
-        },
-        {
-          "value": "sa-east-1",
-          "label": "South America (São Paulo)"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "aws_sg_camc_name",
-      "type": "string",
-      "description": "The name of the aws security group for automation content",
-      "hidden": false,
-      "label": "The name of the aws security group for automation content",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "aws_vpc_name",
-      "type": "string",
-      "description": "The name of the aws vpc",
-      "hidden": false,
-      "label": "The name of the aws vpc",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "WASDMGRNode01-mgmt-network-public",
+      "name": "WASNode02-mgmt-network-public",
       "type": "string",
       "description": "Expose and use public IP of virtual machine for internal communication",
       "default": "true",
       "hidden": false,
-      "label": "Use Public Management Network - WASDMGRNode01",
+      "label": "Use Public Management Network",
       "secured": false,
       "options": [
         {
@@ -902,21 +1070,109 @@
       ],
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "WASNode01-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "IHSNode01-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "WASDMGRNode01-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
     },
     {
       "name": "WASDMGRNode01-flavor",
       "type": "string",
       "description": "WASDMGRNode01 Flavor",
-      "default": "t2.small",
+      "default": "t2.medium",
       "hidden": false,
       "label": "WASDMGRNode01 Flavor",
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasdmgrnode01"
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "WASNode01-flavor",
+      "type": "string",
+      "description": "WASNode01 Flavor",
+      "default": "t2.medium",
+      "hidden": false,
+      "label": "WASNode01 Flavor",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "WASNode02-flavor",
+      "type": "string",
+      "description": "WASNode02 Flavor",
+      "default": "t2.medium",
+      "hidden": false,
+      "label": "WASNode02 Flavor",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
     },
     {
       "name": "WASDMGRNode01_was_version",
@@ -1136,111 +1392,6 @@
       "group_name": "wasdmgrnode01"
     },
     {
-      "name": "WASNode01_root_block_device_delete_on_termination",
-      "type": "string",
-      "description": "AWS Root Block Device Delete on Termination",
-      "default": "true",
-      "hidden": false,
-      "label": "AWS Root Block Device Delete on Termination - WASNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
-      "name": "WASNode01_root_block_device_volume_size",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Size",
-      "default": 25,
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Size - WASNode01",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
-      "name": "WASNode01_root_block_device_volume_type",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Type",
-      "default": "gp2",
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Type - WASNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "gp2",
-          "label": "General Purpose SSD",
-          "default": "true"
-        },
-        {
-          "value": "io1",
-          "label": "Provisioned IOPS SSD"
-        },
-        {
-          "value": "st1",
-          "label": "Throughput Optimized HDD"
-        },
-        {
-          "value": "sc1",
-          "label": "Cold HDD"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
-      "name": "WASNode01_subnet_name",
-      "type": "string",
-      "description": "AWS Subnet Name",
-      "hidden": false,
-      "label": "AWS Subnet Name - WASNode01",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
-      "name": "WASNode01_associate_public_ip_address",
-      "type": "string",
-      "description": "Assign a public IP",
-      "default": "true",
-      "hidden": false,
-      "label": "Assign a public IP - WASNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
       "name": "WASNode01-image",
       "type": "string",
       "description": "Operating system image id / template that should be used when creating the virtual image",
@@ -1273,42 +1424,6 @@
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
-    },
-    {
-      "name": "WASNode01-mgmt-network-public",
-      "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
-      "hidden": false,
-      "label": "Use Public Management Network - WASNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": false,
-          "label": false
-        },
-        {
-          "value": true,
-          "label": true
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
-    },
-    {
-      "name": "WASNode01-flavor",
-      "type": "string",
-      "description": "WASNode01 Flavor",
-      "default": "t2.small",
-      "hidden": false,
-      "label": "WASNode01 Flavor",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode01"
     },
     {
       "name": "WASNode01_was_version",
@@ -1528,111 +1643,6 @@
       "group_name": "wasnode01"
     },
     {
-      "name": "WASNode02_root_block_device_delete_on_termination",
-      "type": "string",
-      "description": "AWS Root Block Device Delete on Termination",
-      "default": "true",
-      "hidden": false,
-      "label": "AWS Root Block Device Delete on Termination - WASNode02",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
-      "name": "WASNode02_root_block_device_volume_size",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Size",
-      "default": 25,
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Size - WASNode02",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
-      "name": "WASNode02_root_block_device_volume_type",
-      "type": "string",
-      "description": "AWS Root Block Device Volume Type",
-      "default": "gp2",
-      "hidden": false,
-      "label": "AWS Root Block Device Volume Type - WASNode02",
-      "secured": false,
-      "options": [
-        {
-          "value": "gp2",
-          "label": "General Purpose SSD",
-          "default": "true"
-        },
-        {
-          "value": "io1",
-          "label": "Provisioned IOPS SSD"
-        },
-        {
-          "value": "st1",
-          "label": "Throughput Optimized HDD"
-        },
-        {
-          "value": "sc1",
-          "label": "Cold HDD"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
-      "name": "WASNode02_subnet_name",
-      "type": "string",
-      "description": "AWS Subnet Name",
-      "hidden": false,
-      "label": "AWS Subnet Name - WASNode02",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
-      "name": "WASNode02_associate_public_ip_address",
-      "type": "string",
-      "description": "Assign a public IP",
-      "default": "true",
-      "hidden": false,
-      "label": "Assign a public IP - WASNode02",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        },
-        {
-          "value": "false",
-          "label": "False"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
       "name": "WASNode02-image",
       "type": "string",
       "description": "Operating system image id / template that should be used when creating the virtual image",
@@ -1665,42 +1675,6 @@
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
-    },
-    {
-      "name": "WASNode02-mgmt-network-public",
-      "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
-      "hidden": false,
-      "label": "Use Public Management Network - WASNode02",
-      "secured": false,
-      "options": [
-        {
-          "value": false,
-          "label": false
-        },
-        {
-          "value": true,
-          "label": true
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
-    },
-    {
-      "name": "WASNode02-flavor",
-      "type": "string",
-      "description": "WASNode02 Flavor",
-      "default": "t2.small",
-      "hidden": false,
-      "label": "WASNode02 Flavor",
-      "secured": false,
-      "required": true,
-      "immutable": false,
-      "immutable_after_create": true,
-      "group_name": "wasnode02"
     },
     {
       "name": "WASNode02_was_version",

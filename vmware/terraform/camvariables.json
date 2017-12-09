@@ -12,10 +12,6 @@
       "label": "Cloud Input Variables"
     },
     {
-      "name": "virtualmachine",
-      "label": "Virtual Machine Input Variables"
-    },
-    {
       "name": "ssh_keys",
       "label": "SSH Keys"
     },
@@ -30,6 +26,10 @@
     {
       "name": "image_parameters",
       "label": "Image Parameters"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
     },
     {
       "name": "wasdmgrnode01",
@@ -496,7 +496,7 @@
       "name": "IHSNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 2048,
+      "default": 4096,
       "hidden": false,
       "label": "Virtual Machine Memory - IHSNode01",
       "secured": false,
@@ -604,6 +604,7 @@
       "secured": false,
       "required": true,
       "immutable": false,
+      "immutable_after_create": true,
       "group_name": "ssh_keys"
     },
     {
@@ -705,6 +706,7 @@
       "name": "WASDMGRNode01_was_webserver_ihs_server_ihs_admin_user",
       "type": "string",
       "description": "IBM HTTP administrative username. Used for creating the web server definition",
+      "default": "ihsadmin",
       "hidden": false,
       "label": "IBM HTTP administrative username - WASDMGRNode01",
       "secured": false,
@@ -861,7 +863,7 @@
       "name": "WASDMGRNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 2048,
+      "default": 4096,
       "hidden": false,
       "label": "Virtual Machine Memory - WASDMGRNode01",
       "secured": false,
@@ -1380,7 +1382,7 @@
       "name": "WASNode01_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 2048,
+      "default": 4096,
       "hidden": false,
       "label": "Virtual Machine Memory - WASNode01",
       "secured": false,
@@ -2019,7 +2021,7 @@
       "name": "WASNode02_memory",
       "type": "string",
       "description": "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024",
-      "default": 2048,
+      "default": 4096,
       "hidden": false,
       "label": "Virtual Machine Memory - WASNode02",
       "secured": false,
@@ -2071,7 +2073,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2084,7 +2085,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2097,7 +2097,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2110,7 +2109,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2123,7 +2121,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2136,7 +2133,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2149,7 +2145,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2162,7 +2157,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2174,7 +2168,6 @@
       "secured": true,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2186,7 +2179,6 @@
       "secured": true,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2199,7 +2191,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2212,7 +2203,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2225,7 +2215,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2238,7 +2227,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2262,7 +2250,6 @@
       ],
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {
@@ -2275,7 +2262,6 @@
       "secured": false,
       "required": true,
       "immutable": false,
-      "immutable_after_create": true,
       "group_name": "wasnode02"
     },
     {

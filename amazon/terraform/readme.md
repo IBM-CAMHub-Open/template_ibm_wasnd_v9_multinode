@@ -1,4 +1,4 @@
-# Template - IBM WebSphere Application Server Network Deployment V9 cell with IBM HTTP Server
+# Template - IBM WebSphere Network Deployment V9 cell with IBM HTTP Server
 Template Version - 1.0
 
 ## Description
@@ -34,11 +34,11 @@ Virtual Machine 4: IBM HTTP Server and web server plug-in for WAS configured<br>
 IBM WebSphere Application Server Network Deployment V9<br>
 IBM HTTP Server for WebSphere Application Server V9<br>
 Web Server Plug-ins for IBM WebSphere Application Server V9<br>
-IBM SDK, Java Technology Edition V8<br>
+IBM SDK, Java Technology Edition 8<br>
 <br>
 ### Default Virtual Machine Settings
 
- t2.medium, vCPU 2, Mem (GiB) 4, EBS (GB) 25<br>
+ t2.medium, vCPU 2, Mem (GiB) 4, EBS (GB) 100<br>
 <br>
 ### Usage and Special Notes
 
