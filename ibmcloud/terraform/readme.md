@@ -11,10 +11,6 @@ This template deploys a WebSphere Application Server Network Deployment V9 cell 
 
  IBM<br>
 <br>
-### Template Version
-
-1.0<br>
-<br>
 ### Operating Systems Supported
 
 Red Hat Enterprise Linux 7<br>
@@ -53,7 +49,7 @@ IBM SDK, Java Technology Edition 8<br>
 
 ### License and Maintainer
 
-Copyright IBM Corp. 2016, 2017 
+Copyright IBM Corp. 2017, 2018 
 
 ### Target Cloud Type
 
@@ -76,8 +72,10 @@ IBM
 
 - IBM WebSphere  8.5.5.12
 - IBM WebSphere  9.0.0.4
+- IBM WebSphere  9.0.0.6
 - IBM HTTP Server  8.5.5.12
 - IBM HTTP Server  9.0.0.4
+- IBM HTTP Server  9.0.0.6
 
 
 *Note, these represent base versions only, explicit fixpacks may also be added.*
