@@ -114,7 +114,7 @@
     },
     {
       "name": "IHSNode01_ihs_admin_server_password",
-      "type": "string",
+      "type": "password",
       "description": "IBM HTTP Server Admin Server Password",
       "hidden": false,
       "label": "IBM HTTP Server admin server password - IHSNode01",
@@ -379,7 +379,7 @@
         },
         {
           "value": "mex01",
-          "label": "Querétaro, Mexico"
+          "label": "Quer\u00e9taro, Mexico"
         },
         {
           "value": "sjc01",
@@ -655,75 +655,6 @@
       "group_name": "cloud"
     },
     {
-      "name": "WASDMGRNode01_local_disk",
-      "type": "string",
-      "description": "User local disk or SAN disk",
-      "default": "false",
-      "hidden": false,
-      "label": "IBMCloud - Local / SAN Disk - WASDMGRNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True"
-        },
-        {
-          "value": "false",
-          "label": "False",
-          "default": "true"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "WASNode01_local_disk",
-      "type": "string",
-      "description": "User local disk or SAN disk",
-      "default": "false",
-      "hidden": false,
-      "label": "IBMCloud - Local / SAN Disk - WASNode01",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True"
-        },
-        {
-          "value": "false",
-          "label": "False",
-          "default": "true"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
-      "name": "WASNode02_local_disk",
-      "type": "string",
-      "description": "User local disk or SAN disk",
-      "default": "false",
-      "hidden": false,
-      "label": "IBMCloud - Local / SAN Disk - WASNode02",
-      "secured": false,
-      "options": [
-        {
-          "value": "true",
-          "label": "True"
-        },
-        {
-          "value": "false",
-          "label": "False",
-          "default": "true"
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "cloud"
-    },
-    {
       "name": "WASDMGRNode01_was_webserver_ihs_server_admin_port",
       "type": "string",
       "description": "IBM HTTP Administrative Server Port.  Used for creating the web server definition",
@@ -814,7 +745,7 @@
     },
     {
       "name": "ibm_im_repo_password",
-      "type": "string",
+      "type": "password",
       "description": "IBM Software  Installation Manager Repository Password",
       "hidden": true,
       "label": "IBM Software Installation Manager Repository Password",
@@ -839,7 +770,7 @@
     },
     {
       "name": "ibm_sw_repo_password",
-      "type": "string",
+      "type": "password",
       "description": "IBM Software Repo Password",
       "hidden": true,
       "label": "IBM Software Repo Password",
@@ -906,6 +837,28 @@
       "hidden": false,
       "label": "Short hostname - IHSNode01",
       "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "IHSNode01-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network - IHSNode01",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
@@ -1035,7 +988,7 @@
         },
         {
           "value": "mex01",
-          "label": "Querétaro, Mexico"
+          "label": "Quer\u00e9taro, Mexico"
         },
         {
           "value": "sjc01",
@@ -1311,6 +1264,29 @@
       "group_name": "cloud"
     },
     {
+      "name": "WASDMGRNode01_local_disk",
+      "type": "string",
+      "description": "User local disk or SAN disk",
+      "default": "false",
+      "hidden": false,
+      "label": "IBMCloud - Local / SAN Disk - WASDMGRNode01",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True"
+        },
+        {
+          "value": "false",
+          "label": "False",
+          "default": "true"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
       "name": "WASDMGRNode01-name",
       "type": "string",
       "description": "Short hostname of virtual machine",
@@ -1409,7 +1385,7 @@
         },
         {
           "value": "mex01",
-          "label": "Querétaro, Mexico"
+          "label": "Quer\u00e9taro, Mexico"
         },
         {
           "value": "sjc01",
@@ -1662,6 +1638,29 @@
       "group_name": "cloud"
     },
     {
+      "name": "WASNode01_local_disk",
+      "type": "string",
+      "description": "User local disk or SAN disk",
+      "default": "false",
+      "hidden": false,
+      "label": "IBMCloud - Local / SAN Disk - WASNode01",
+      "secured": false,
+      "options": [
+        {
+          "value": "true",
+          "label": "True"
+        },
+        {
+          "value": "false",
+          "label": "False",
+          "default": "true"
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
       "name": "WASNode02_dedicated_acct_host_only",
       "type": "string",
       "description": "Shared or dedicated host, where dedicated host usually means higher performance and cost",
@@ -1797,26 +1796,27 @@
       "group_name": "cloud"
     },
     {
-      "name": "IHSNode01-mgmt-network-public",
+      "name": "WASNode02_local_disk",
       "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
+      "description": "User local disk or SAN disk",
+      "default": "false",
       "hidden": false,
-      "label": "Use Public Management Network",
+      "label": "IBMCloud - Local / SAN Disk - WASNode02",
       "secured": false,
       "options": [
         {
-          "value": false,
-          "label": false
+          "value": "true",
+          "label": "True"
         },
         {
-          "value": true,
-          "label": true
+          "value": "false",
+          "label": "False",
+          "default": "true"
         }
       ],
       "required": true,
       "immutable": false,
-      "group_name": "virtualmachine"
+      "group_name": "cloud"
     },
     {
       "name": "WASDMGRNode01-mgmt-network-public",
@@ -1824,51 +1824,7 @@
       "description": "Expose and use public IP of virtual machine for internal communication",
       "default": "true",
       "hidden": false,
-      "label": "Use Public Management Network",
-      "secured": false,
-      "options": [
-        {
-          "value": false,
-          "label": false
-        },
-        {
-          "value": true,
-          "label": true
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
-    },
-    {
-      "name": "WASNode01-mgmt-network-public",
-      "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
-      "hidden": false,
-      "label": "Use Public Management Network",
-      "secured": false,
-      "options": [
-        {
-          "value": false,
-          "label": false
-        },
-        {
-          "value": true,
-          "label": true
-        }
-      ],
-      "required": true,
-      "immutable": false,
-      "group_name": "virtualmachine"
-    },
-    {
-      "name": "WASNode02-mgmt-network-public",
-      "type": "string",
-      "description": "Expose and use public IP of virtual machine for internal communication",
-      "default": "true",
-      "hidden": false,
-      "label": "Use Public Management Network",
+      "label": "Use Public Management Network - WASDMGRNode01",
       "secured": false,
       "options": [
         {
@@ -1964,7 +1920,7 @@
     },
     {
       "name": "WASDMGRNode01_was_security_admin_user_pwd",
-      "type": "string",
+      "type": "password",
       "description": "The password for the WebSphere administrative account",
       "hidden": false,
       "label": "WebSphere administrative user password - WASDMGRNode01",
@@ -1989,7 +1945,7 @@
     },
     {
       "name": "WASDMGRNode01_was_profiles_dmgr_keystorepassword",
-      "type": "string",
+      "type": "password",
       "description": "Specifies the password to use on keystore created during profile creation",
       "hidden": false,
       "label": "WebSphere default keystore password - WASDMGRNode01",
@@ -2136,6 +2092,28 @@
       "group_name": "virtualmachine"
     },
     {
+      "name": "WASNode01-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network - WASNode01",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
       "name": "WASNode01_was_version",
       "type": "string",
       "description": "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.6",
@@ -2241,7 +2219,7 @@
     },
     {
       "name": "WASNode01_was_security_admin_user_pwd",
-      "type": "string",
+      "type": "password",
       "description": "The password for the WebSphere administrative account",
       "hidden": false,
       "label": "WebSphere administrative user password - WASNode01",
@@ -2253,7 +2231,7 @@
     },
     {
       "name": "WASNode01_was_profiles_node_profile_keystorepassword",
-      "type": "string",
+      "type": "password",
       "description": "Specifies the password to use on all keystore files created during profile creation",
       "hidden": false,
       "label": "WebSphere default keystore password - WASNode01",
@@ -2440,7 +2418,7 @@
         },
         {
           "value": "mex01",
-          "label": "Querétaro, Mexico"
+          "label": "Quer\u00e9taro, Mexico"
         },
         {
           "value": "sjc01",
@@ -2592,6 +2570,28 @@
       "group_name": "virtualmachine"
     },
     {
+      "name": "WASNode02-mgmt-network-public",
+      "type": "string",
+      "description": "Expose and use public IP of virtual machine for internal communication",
+      "default": "true",
+      "hidden": false,
+      "label": "Use Public Management Network - WASNode02",
+      "secured": false,
+      "options": [
+        {
+          "value": false,
+          "label": false
+        },
+        {
+          "value": true,
+          "label": true
+        }
+      ],
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
       "name": "WASNode02_was_version",
       "type": "string",
       "description": "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.6",
@@ -2697,7 +2697,7 @@
     },
     {
       "name": "WASNode02_was_security_admin_user_pwd",
-      "type": "string",
+      "type": "password",
       "description": "The password for the WebSphere administrative account",
       "hidden": false,
       "label": "WebSphere administrative user password - WASNode02",
@@ -2709,7 +2709,7 @@
     },
     {
       "name": "WASNode02_was_profiles_node_profile_keystorepassword",
-      "type": "string",
+      "type": "password",
       "description": "Specifies the password to use on all keystore files created during profile creation",
       "hidden": false,
       "label": "WebSphere default keystore password - WASNode02",
