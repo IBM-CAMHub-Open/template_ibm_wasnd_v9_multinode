@@ -227,7 +227,7 @@ variable "IHSNode01_ihs_java_legacy" {
 variable "IHSNode01_ihs_java_version" {
   type = "string"
   description = "The Java version to be used with IBM HTTP Server"
-  default = "8.0.50.7"
+  default = "8.0.5.17"
 }
 
 #Variable : IHSNode01_ihs_os_users_ihs_gid
@@ -283,7 +283,7 @@ variable "IHSNode01_ihs_port" {
 variable "IHSNode01_ihs_version" {
   type = "string"
   description = "The version of IBM HTTP Server to install"
-  default = "9.0.0.6"
+  default = "9.0.0.8"
 }
 
 
@@ -387,7 +387,7 @@ variable "WASDMGRNode01_was_install_dir" {
 variable "WASDMGRNode01_was_java_version" {
   type = "string"
   description = "The Java SDK version that should be installed with the WebSphere Application Server. Example format is 8.0.4.70"
-  default = "8.0.50.7"
+  default = "8.0.5.17"
 }
 
 #Variable : WASDMGRNode01_was_os_users_was_gid
@@ -461,8 +461,8 @@ variable "WASDMGRNode01_was_security_admin_user_pwd" {
 #Variable : WASDMGRNode01_was_version
 variable "WASDMGRNode01_was_version" {
   type = "string"
-  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.6"
-  default = "9.0.0.6"
+  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.8"
+  default = "9.0.0.8"
 }
 
 #Variable : WASDMGRNode01_was_webserver_ihs_server_admin_port
@@ -555,7 +555,7 @@ variable "WASNode01_was_install_dir" {
 variable "WASNode01_was_java_version" {
   type = "string"
   description = "The Java SDK version that should be installed with the WebSphere Application Server. Example format is 8.0.4.70"
-  default = "8.0.50.7"
+  default = "8.0.5.17"
 }
 
 #Variable : WASNode01_was_os_users_was_gid
@@ -622,8 +622,8 @@ variable "WASNode01_was_security_admin_user_pwd" {
 #Variable : WASNode01_was_version
 variable "WASNode01_was_version" {
   type = "string"
-  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.6"
-  default = "9.0.0.6"
+  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.8"
+  default = "9.0.0.8"
 }
 
 #Variable : WASNode01_was_wsadmin_clusters_cluster01_cluster_name
@@ -695,7 +695,7 @@ variable "WASNode02_was_install_dir" {
 variable "WASNode02_was_java_version" {
   type = "string"
   description = "The Java SDK version that should be installed with the WebSphere Application Server. Example format is 8.0.4.70"
-  default = "8.0.50.7"
+  default = "8.0.5.17"
 }
 
 #Variable : WASNode02_was_os_users_was_gid
@@ -762,8 +762,8 @@ variable "WASNode02_was_security_admin_user_pwd" {
 #Variable : WASNode02_was_version
 variable "WASNode02_was_version" {
   type = "string"
-  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.6"
-  default = "9.0.0.6"
+  description = "The release and fixpack level of WebSphere Application Server to be installed. Example formats are 8.5.5.12 or 9.0.0.8"
+  default = "9.0.0.8"
 }
 
 #Variable : WASNode02_was_wsadmin_clusters_cluster01_cluster_name

@@ -73,9 +73,11 @@ IBM
 - IBM WebSphere  8.5.5.12
 - IBM WebSphere  9.0.0.4
 - IBM WebSphere  9.0.0.6
+- IBM WebSphere  9.0.0.8
 - IBM HTTP Server  8.5.5.12
 - IBM HTTP Server  9.0.0.4
 - IBM HTTP Server  9.0.0.6
+- IBM HTTP Server  9.0.0.8
 
 
 *Note, these represent base versions only, explicit fixpacks may also be added.*
@@ -418,7 +420,7 @@ The following files are neccessary on the Software Repository to successfully in
     <td>9.0.0</td>
     <td>X86_64</td>
     <td>IM Repository File</td>
-    <td><br>com.ibm.websphere.BASE.v90_9.0.4.20170523_1327</br><br>com.ibm.websphere.IHS.v90_9.0.4.20170523_1327</br><br>com.ibm.websphere.ND.v90_9.0.4.20170523_1327</br><br>com.ibm.websphere.PLG.v90_9.0.4.20170523_1327</br><br>com.ibm.websphere.WCT.v90_9.0.4.20170523_1327</br></td>
+    <td><br>com.ibm.websphere.BASE.v90_9.0.8.20180530_1827</br><br>com.ibm.websphere.IHS.v90_9.0.8.20180530_1827</br><br>com.ibm.websphere.ND.v90_9.0.8.20180530_1827</br><br>com.ibm.websphere.PLG.v90_9.0.8.20180530_1827</br><br>com.ibm.websphere.WCT.v90_9.0.8.20180530_1827</br></td>
   </tr>
 </table>
 
@@ -442,7 +444,7 @@ The following files are neccessary on the Software Repository to successfully in
     <td>9.0.0</td>
     <td>X86_64</td>
     <td>IM Repository File</td>
-    <td><br>com.ibm.websphere.IHS.v90_9.0.4.20170523_1327</br><br>com.ibm.websphere.PLG.v90_9.0.4.20170523_1327</br></td>
+    <td><br>com.ibm.websphere.IHS.v90_9.0.8.20180530_1827</br><br>com.ibm.websphere.PLG.v90_9.0.8.20180530_1827</br></td>
   </tr>
 </table>
 
