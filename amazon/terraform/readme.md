@@ -1,5 +1,5 @@
 # Template - IBM WebSphere Network Deployment V9 cell with IBM HTTP Server
-Template Version - 1.0
+Template Version - 2.1
 
 ## Description
 

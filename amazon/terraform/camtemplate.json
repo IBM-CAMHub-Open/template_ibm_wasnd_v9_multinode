@@ -1,7 +1,7 @@
 {
     "name": "IBM WebSphere Network Deployment V9 cell with IBM HTTP Server - Amazon EC2",
     "description": "This template deploys a WebSphere Application Server Network Deployment V9 cell with an integrated IBM HTTP Server.",
-    "version": "1.0",
+    "version": "2.1",
     "imageUrl": "",
     "image": "",
     "type": "chefcontent",
